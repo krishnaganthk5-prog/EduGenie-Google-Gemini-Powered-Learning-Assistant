@@ -13,20 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-from google.ai.generativelanguage_v1beta3 import gapic_version as package_version
-
-__version__ = package_version.__version__
-
-
-from .services.discuss_service import DiscussServiceAsyncClient, DiscussServiceClient
-from .services.model_service import ModelServiceAsyncClient, ModelServiceClient
-from .services.permission_service import (
-    PermissionServiceAsyncClient,
-    PermissionServiceClient,
-)
-from .services.text_service import TextServiceAsyncClient, TextServiceClient
-from .types.citation import CitationMetadata, CitationSource
-from .types.discuss_service import (
+from .citation import CitationMetadata, CitationSource
+from .discuss_service import (
     CountMessageTokensRequest,
     CountMessageTokensResponse,
     Example,
@@ -35,8 +23,8 @@ from .types.discuss_service import (
     Message,
     MessagePrompt,
 )
-from .types.model import Model
-from .types.model_service import (
+from .model import Model
+from .model_service import (
     CreateTunedModelMetadata,
     CreateTunedModelRequest,
     DeleteTunedModelRequest,
@@ -48,8 +36,8 @@ from .types.model_service import (
     ListTunedModelsResponse,
     UpdateTunedModelRequest,
 )
-from .types.permission import Permission
-from .types.permission_service import (
+from .permission import Permission
+from .permission_service import (
     CreatePermissionRequest,
     DeletePermissionRequest,
     GetPermissionRequest,
@@ -59,14 +47,14 @@ from .types.permission_service import (
     TransferOwnershipResponse,
     UpdatePermissionRequest,
 )
-from .types.safety import (
+from .safety import (
     ContentFilter,
     HarmCategory,
     SafetyFeedback,
     SafetyRating,
     SafetySetting,
 )
-from .types.text_service import (
+from .text_service import (
     BatchEmbedTextRequest,
     BatchEmbedTextResponse,
     CountTextTokensRequest,
@@ -79,7 +67,7 @@ from .types.text_service import (
     TextCompletion,
     TextPrompt,
 )
-from .types.tuned_model import (
+from .tuned_model import (
     Dataset,
     Hyperparameters,
     TunedModel,
@@ -91,65 +79,57 @@ from .types.tuned_model import (
 )
 
 __all__ = (
-    "DiscussServiceAsyncClient",
-    "ModelServiceAsyncClient",
-    "PermissionServiceAsyncClient",
-    "TextServiceAsyncClient",
-    "BatchEmbedTextRequest",
-    "BatchEmbedTextResponse",
     "CitationMetadata",
     "CitationSource",
-    "ContentFilter",
     "CountMessageTokensRequest",
     "CountMessageTokensResponse",
-    "CountTextTokensRequest",
-    "CountTextTokensResponse",
-    "CreatePermissionRequest",
-    "CreateTunedModelMetadata",
-    "CreateTunedModelRequest",
-    "Dataset",
-    "DeletePermissionRequest",
-    "DeleteTunedModelRequest",
-    "DiscussServiceClient",
-    "EmbedTextRequest",
-    "EmbedTextResponse",
-    "Embedding",
     "Example",
     "GenerateMessageRequest",
     "GenerateMessageResponse",
-    "GenerateTextRequest",
-    "GenerateTextResponse",
-    "GetModelRequest",
-    "GetPermissionRequest",
-    "GetTunedModelRequest",
-    "HarmCategory",
-    "Hyperparameters",
-    "ListModelsRequest",
-    "ListModelsResponse",
-    "ListPermissionsRequest",
-    "ListPermissionsResponse",
-    "ListTunedModelsRequest",
-    "ListTunedModelsResponse",
     "Message",
     "MessagePrompt",
     "Model",
-    "ModelServiceClient",
+    "CreateTunedModelMetadata",
+    "CreateTunedModelRequest",
+    "DeleteTunedModelRequest",
+    "GetModelRequest",
+    "GetTunedModelRequest",
+    "ListModelsRequest",
+    "ListModelsResponse",
+    "ListTunedModelsRequest",
+    "ListTunedModelsResponse",
+    "UpdateTunedModelRequest",
     "Permission",
-    "PermissionServiceClient",
+    "CreatePermissionRequest",
+    "DeletePermissionRequest",
+    "GetPermissionRequest",
+    "ListPermissionsRequest",
+    "ListPermissionsResponse",
+    "TransferOwnershipRequest",
+    "TransferOwnershipResponse",
+    "UpdatePermissionRequest",
+    "ContentFilter",
     "SafetyFeedback",
     "SafetyRating",
     "SafetySetting",
+    "HarmCategory",
+    "BatchEmbedTextRequest",
+    "BatchEmbedTextResponse",
+    "CountTextTokensRequest",
+    "CountTextTokensResponse",
+    "Embedding",
+    "EmbedTextRequest",
+    "EmbedTextResponse",
+    "GenerateTextRequest",
+    "GenerateTextResponse",
     "TextCompletion",
     "TextPrompt",
-    "TextServiceClient",
-    "TransferOwnershipRequest",
-    "TransferOwnershipResponse",
+    "Dataset",
+    "Hyperparameters",
     "TunedModel",
     "TunedModelSource",
     "TuningExample",
     "TuningExamples",
     "TuningSnapshot",
     "TuningTask",
-    "UpdatePermissionRequest",
-    "UpdateTunedModelRequest",
 )
